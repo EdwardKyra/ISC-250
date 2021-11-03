@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <style>
+            
+            body{
+                background-color:gray;
+                overflow: hidden;
+            }
+            
+            #squarecontainer{
+                width:100%; 
+                height:100%; 
+                position:absolute; 
+                display:block;
+            }
+            
+            #squarespot{
+                display:block;
+                position: absolute;
+                margin: auto; 
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 60%; 
+                height: 60%; 
+                background-color: white;
+                box-shadow: 5px 5px #33333388;
+                transition: background-color 0.2s;
+            }
+            
+            #square{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 50%; 
+                height: 50%; 
+                background-color:lightGray; 
+                margin: auto; 
+                border-radius: 50px;
+                box-shadow: 5px 5px #33333388;
+                transition: background-color 0.5s, border-radius 0.2s, opacity 0.2s, width 0.1s, height 0.1s;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div style="squarecontainer">
+            <div id="squarespot" 
+                onmousemove="waggle(event);"
+                onmouseleave="reset();uncircle()"
+                onmousedown="circle();" 
+                onmouseup="uncircle();"
+                >
+                <div id="square">
+                
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            
+            function waggle(e){
+                var boundrect = document.getElementById('squarespot').getBoundingClientRect();
+                var target = document.getElementById('square');
+                
+                var mouseX = e.clientX;
+                var mouseY = e.clientY;
+                
+                var left = boundrect.left;
+                var top = boundrect.top;
+                var width = boundrect.width;
+                var height = boundrect.height;
+                
+                var x_prop = (mouseX - left) / width;
+                var y_prop = (mouseY - top) / height;
+                
+                var color;
+                
+                //topleft
+                if(x_prop < 0.5 & y_prop < 0.5){
+                    color = "Tomato";
+                }
+                //topright
+                else if (x_prop > 0.5 && y_prop < 0.5){
+                    color = "MediumSeaGreen";
+                }
+                //bottomleft
+                else if (x_prop < 0.5 && y_prop > 0.5){
+                    color = "DodgerBlue";
+                }
+                //bottomright
+                else{
+                    color = "Orange";
+                }
+                
+                x_prop = Math.abs((x_prop * 2) - 1);
+                y_prop = Math.abs((y_prop * 2) - 1);
+                
+                var x_percent = Math.round(x_prop * 100);
+                var y_percent = Math.round(y_prop * 100);
+                
+                target.style.width = x_percent + "%";
+                target.style.height = y_percent + "%";
+                target.style.backgroundColor = color;
+            }
+            
+            function reset(){
+                var target = document.getElementById('square');
+                
+                target.style.width = "50%";
+                target.style.height = "50%";
+                target.style.backgroundColor = "lightGray";
+            }
+            
+            function circle(){
+                var target = document.getElementById('square');
+                
+                target.style.borderRadius = "50%";
+                target.style.filter = "brightness(150%)";
+                
+                var box = document.getElementById('squarespot');
+                
+                box.style.backgroundColor = "#000000ff";
+            }
+            
+            function uncircle(){
+                var target = document.getElementById('square');
+                
+                target.style.borderRadius = "50px";
+                target.style.filter = "brightness(100%)";
+                
+                
+                var box = document.getElementById('squarespot');
+                
+                box.style.backgroundColor = "#ffffffff";
+            }
+            
+        
+        </script>
+        
+    </body>
+
+</html>

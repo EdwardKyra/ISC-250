@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+
+    <body>
+        Enter a number you'd like to factorial:
+        <input id="ans" type="number" placeholder="Enter num >= 0"></input>
+
+        <button onclick="letsFactorial(document.getElementById('ans').value)">Factorial!</button>
+
+        <h1 id="Factorial">Factorial</h1>
+
+       <script>
+
+
+            function letsFactorial(num){
+                if(num < 0){
+                    document.getElementById('Factorial').innerHTML = "You cannot Factorial a negative number!";
+                } else if (num == 0){
+                    document.getElementById('Factorial').innerHTML = "1";
+                } else {
+                    number = 1;
+                    temp = 1;
+                    while(number <= num){
+                        temp = number * temp;
+                        number++;
+                }
+                
+                num = temp;
+
+                document.getElementById('Factorial').innerHTML = num;
+                }
+             
+            };
+
+       </script> 
+    </body>
+
+</html>

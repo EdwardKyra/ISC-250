@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Project 2</title>
+	<meta name="author" content="w3newbie.com">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style.css -->
+	<link id="style1" rel="stylesheet" href="css/style.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.min.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="landing"> 
+    <div class= "home-wrap">
+        <div class= "home-inner"></div>
+    </div>
+</div>
+
+	<!-- Start Landing Page Caption -->
+    <div class="caption text-center text-uppercase">
+        <h1 class= "animate__animated animate__fadeInUp animate__fast"> Contact</h1>
+        <h3 class= "animate__animated animate__fadeInUp animate__slow"> Dark Mode</h3>
+        <label class= "animate__animated animate__fadeInUp animate__slower switch">
+            <input type="checkbox">
+            <span class="slider round" onclick="toggle()"></span>
+        </label>
+    </div>
+	<!-- End Landing Page Caption -->
+
+<div class="container py-5">
+    <row class="text-center"></row>
+
+    <center><h1> Navigation</h1> </center>
+
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center" >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"> Contact </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="java.html"> Java Implimemtation </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="racket.html"> Dr Racket Implimemtation </a>
+          </li>
+        </ul>
+      </nav>
+
+      <br> <br>
+
+    <label class= "animate__animated animate__fadeInUp animate__slower switch">
+        <input type="checkbox">
+        <span class="slider round" onclick="toggle()"></span>
+    </label>
+</div>
+
+<!-- Script -->
+<script>
+	function toggle() { // toggle
+		var a = document.getElementById("style1"); // style sheet id
+		a.x = 'css/style2' == a.x ? 'css/style' : 'css/style2'; //switch file loop
+		a.href = a.x + '.css'; //add .css
+	}
+</script>
+<!-- jQuery -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- References:
+	Toggle: https://codepen.io/GemmaStiles/pen/NWxjrVG
+	Switch Style Sheets: https://stackoverflow.com/questions/18368319/toggle-css-sheets-on-click-with-javascript -->
+
+
+<center><p>
+  In college I major in Computer Scienece and minor in Information Science. However, in highschool I majored in Fine Arts so 
+  although I enjoy coding, I also enjoy art and overall, just pretty things. At the moment, I am a junior and have taken a few 
+  coding classes that featire different languages. Different languages have different syntax and thats pretty cool to me so I will 
+  show different pictures in different languages
+
+</p></center>
+
+<br><br>
+
+<center><h3>Contact Information</h3></center>
+
+<br><br>
+
+<center>
+<div class="col-sm-8">
+  <a href="https://github.com/EdwardKyra"><img class="img-responsive" src="github.png" style="height: 230px; width: 230px;display:inline-block"></a>
+  <a href="https://www.linkedin.com/feed/"><img class="img-responsive" src="linkedin.png" style="height: 200px; width: 200px;display:inline-block"></a>
+</div>
+</center>
+
+<br> <br>
+
+
+</body>
+</html>
+

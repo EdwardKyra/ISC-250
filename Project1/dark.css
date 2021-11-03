@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+}
+
+body.dark {
+	background: #0b0c10;
+}
+
+body.dark p{
+    color: #66fcf1;
+}
+
+body.dark h1{
+    color: #45a29e;
+}
+
+header.dark nav{
+    color: #c5c6c7;
+}
+
+:link .dark{
+    color: red;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.label {
+	background-color: purple;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}

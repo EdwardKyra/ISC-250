@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<title>Project 1</title>
+
+<body>
+
+
+  <header>
+    <h1>DrRacket Art Implimentation </h1>
+      <nav><ul>
+
+        <li><a href="index.html"> Home</a> </li>
+        <li><a href = "about.html" > About</a></li>
+        <li><a href = "java.html" > Java</a></li>
+        <li><a href = "drracket.html" > DrRacket</a></li>
+      </ul></nav>
+  </header>
+
+  <br><br>
+
+  <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+  <h1 class="body">Code</h1>
+
+  <section>
+  <p>
+      Dr Racket is different from other languages because it has a definitions 
+      window and a interactions window. In the definitions window, you would
+      basically put methods and functions there and in the interactions window 
+      you would call the methods you defined in the definitons window. 
+    </p>
+
+<div class="pic">
+    <img src="racket.png">
+</div>
+
+<h1 class="body">Implimentation</h1>
+<p>
+   Dr Racket will show the image in the iteractions window instead of creating a whole new window.
+   If you wanted, you can continue calling as many functions as you want. 
+   <br>
+   If you really wanted, you can write the funtion in the 
+   interactions area. The definitions area are usually for 
+   more complicated funtions. 
+   <br>
+   If you wrote it in the interations area, it would be: 
+   ( define the-circle (circle 200 "solid" "blue")) 
+</p>
+
+<img src="racketpic.png" alt="Blue Dot">
+</section>
+
+    </footer>
+</body>
+
+<script>
+  const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+document.body.classList.toggle('dark');
+});
+ </script>
+
+</html>

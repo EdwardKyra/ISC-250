@@ -1,0 +1,23 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: oblique;
+    background-color: #ee4c7c;;
+}
+
+h1, h2{
+    color: #5d001e;
+    margin: 10px;
+}
+
+p{
+    color: #e3afbc;
+    font-size: 18px;
+    margin: 15px;
+}
+
+li{
+    color: #e3afbc;
+    font-size: 15;
+    margin: 20px;
+}
