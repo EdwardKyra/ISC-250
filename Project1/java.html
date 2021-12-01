@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<title>Project 1</title>
+
+<body>
+  <header>
+    <h1> Java Art Implimentation </h1>
+      <nav><ul>
+        <li><a href="index.html"> Home</a> </li>
+        <li><a href = "about.html" > About</a></li>
+        <li><a href = "java.html" > Java</a></li>
+        <li><a href = "drracket.html" > DrRacket</a></li>
+      </ul></nav>
+  </header>
+
+  <br><br>
+
+  <div>
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+  <h1 class="body">Code</h1>
+
+  <section>
+  <p>
+      Java is a popular language and to code pictures in this language, you could 
+      either put the method in the same class or to be neat, use different classes 
+      then call the that class in the main class
+    </p>
+</section>
+
+<div class="pic">
+    <img src="java.png">
+</div>
+
+<h1 class="body">Implimentation</h1>
+<p>
+    When runing the code, in Java you can just press run,
+    however, in Dr Racket you will need to type the funtion in 
+    the interactions area then press run and it will show 
+    in the interactions area unlike Java where it will open 
+    a new window and show you the image. 
+</p>
+
+<img src="dot.png" alt="Blue Dot">
+
+</body>
+
+<script>
+  const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+document.body.classList.toggle('dark');
+});
+ </script>
+
+</html>
